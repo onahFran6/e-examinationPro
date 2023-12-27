@@ -45,9 +45,12 @@ const Thank = () => {
         xs={12}
         sx={{
           height: "90%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
       >
-        <ThankYou></ThankYou>
+        <ThankYou />
       </Grid>
     </Box>
   );

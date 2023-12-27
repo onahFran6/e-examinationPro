@@ -2,7 +2,46 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+### `Download the project to Your Pc`
+
+having the project in ur local environment
+
+```
+
+git clone <Repository Url>
+
+# or
+
+git pull  <Repository Url>
+
+
+### `Installing npm package`
+
+installing all the requires npm packages
+
+```
+
+npm install
+
+# or
+
+yarn install
+
+```
+
+### `Environment variable`
+
+```
+
+create a .env file and add the below to it
+
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="entercloudinary_cloud_name"
+
+````
+
+### `Start the app`
+
+Running the server on your local environment
 
 ```bash
 npm run dev
@@ -12,7 +51,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
+````
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

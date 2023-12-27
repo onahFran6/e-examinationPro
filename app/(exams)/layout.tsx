@@ -6,5 +6,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <Box>{children}</Box>;
+  return <Box sx={{ maxHeight: "100vh" }}>{children}</Box>;
 }
+//<Box sx={{ display: "flex", maxHeight: "100vh" }}>{children}</Box>;
