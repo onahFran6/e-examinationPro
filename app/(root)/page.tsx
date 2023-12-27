@@ -949,7 +949,7 @@ const Home: React.FC = () => {
                           bgcolor: "#303169",
                           borderRadius: "50px",
                           color: theme.palette.background.default,
-                          px: { xs: 1, sm: 2 },
+                          px: { xs: 1, sm: 1 },
                           m: 1,
                           "&:hover": {
                             bgcolor: theme.palette.primary.light,
