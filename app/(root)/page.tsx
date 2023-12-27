@@ -1139,7 +1139,8 @@ const Home: React.FC = () => {
             <Grid
               item
               xs={6}
-              sm={2.4}
+              sm={6}
+              md={2.4}
               sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -1183,8 +1184,8 @@ const Home: React.FC = () => {
             <Grid
               item
               xs={6}
-              sm={2.4}
-              // md={2}
+              sm={6}
+              md={2.4}
               sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -1228,8 +1229,8 @@ const Home: React.FC = () => {
             <Grid
               item
               xs={6}
-              sm={2.4}
-              // md={2}
+              sm={6}
+              md={2.4}
               sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -1302,8 +1303,8 @@ const Home: React.FC = () => {
             <Grid
               item
               xs={6}
-              sm={2.4}
-              // md={2}
+              sm={6}
+              md={2.4}
               sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -1346,7 +1347,8 @@ const Home: React.FC = () => {
             <Grid
               item
               xs={12}
-              sm={2.4}
+              sm={12}
+              md={2.4}
               sx={{
                 display: "flex",
                 flexDirection: "column",
@@ -1355,47 +1357,59 @@ const Home: React.FC = () => {
               }}
               py={2}
             >
-              <Typography
-                variant="h2"
-                sx={{
-                  fontSize: { xs: "18px", sm: "24px" },
-                  fontWeight: "bold",
-                  color: "#303169",
+              <Box
+                alignSelf={{
+                  xs: "center",
+                  sm: "center",
+                  md: "start",
                 }}
-                alignSelf={{ xs: "center", sm: "start" }}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 2,
+                }}
               >
-                More
-              </Typography>
-              {MoreLinkData.map((data, index) => {
-                return (
-                  <Box
-                    alignSelf={{
-                      xs: "center",
-                      sm: "start",
-                    }}
-                    sx={{
-                      "&:hover": {
-                        bgcolor: theme.palette.primary.light,
-                      },
-                    }}
-                    key={`More${index}`}
-                  >
-                    <Link href={`/`}>
-                      <Typography
-                        variant="h2"
-                        sx={{
-                          fontSize: { xs: "14px", sm: "18px" },
-                          color: "gray",
-                          fontWeight: 300,
-                        }}
-                        alignSelf={{ xs: "start", sm: "start" }}
-                      >
-                        {data}
-                      </Typography>
-                    </Link>
-                  </Box>
-                );
-              })}
+                <Typography
+                  variant="h2"
+                  sx={{
+                    fontSize: { xs: "18px", sm: "24px" },
+                    fontWeight: "bold",
+                    color: "#303169",
+                  }}
+                  alignSelf={{ xs: "center", sm: "start", md: "start" }}
+                >
+                  More
+                </Typography>
+                {MoreLinkData.map((data, index) => {
+                  return (
+                    <Box
+                      sx={{
+                        "&:hover": {
+                          bgcolor: theme.palette.primary.light,
+                        },
+                      }}
+                      key={`More${index}`}
+                    >
+                      <Link href={`/`}>
+                        <Typography
+                          variant="h2"
+                          sx={{
+                            fontSize: { xs: "14px", sm: "18px" },
+                            color: "gray",
+                            fontWeight: 300,
+                            "&:hover": {
+                              bgcolor: theme.palette.primary.light,
+                            },
+                          }}
+                          alignSelf="left"
+                        >
+                          {data}
+                        </Typography>
+                      </Link>
+                    </Box>
+                  );
+                })}
+              </Box>
             </Grid>
           </Grid>
           {/* consulto  footer link */}
