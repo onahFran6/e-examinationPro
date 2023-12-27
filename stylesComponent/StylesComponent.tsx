@@ -37,7 +37,7 @@ export const SpecializationCard = styled(Card)(({ theme }) => ({
   transition: "all 700ms ease-in-out",
   backgroundColor: "#89FFFE30", //#89FFFE
   "&:hover": {
-    backgroundColor: "white", // backgroundColor: "#F6D2BB",
+    backgroundColor: theme.palette.background.default,
     transform: "scale(1.05)",
     boxShadow: 3,
   },

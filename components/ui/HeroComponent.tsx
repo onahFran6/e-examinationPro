@@ -190,18 +190,17 @@ const HeroComponent: React.FC = () => {
               <TextField
                 variant="standard"
                 placeholder="Search for doctors,"
-                autoFocus={true}
+                autoFocus={false}
                 value={searchValue}
                 onChange={(e) => setSearchValue(e.target.value)}
                 sx={{
                   bgcolor: "transparent",
-
                   color: "#18181B",
-                  outline: "none",
                   border: 0,
                   padding: { xs: 1, sm: 2 },
                   "& .MuiInputBase-input": {
                     padding: 0,
+                    outline: "none",
                   },
                 }}
               />

@@ -21,6 +21,7 @@ import UploadFile from "./UploadFile";
 import { useRouter } from "next/navigation";
 import { useTheme } from "@mui/material/styles";
 import CustomizedSnackbar from "./CustomSnackbar";
+import { alpha, styled } from "@mui/material/styles";
 
 const DescriptiveExamPage: React.FC = () => {
   const dispatch = useDispatch();
@@ -237,7 +238,7 @@ const DescriptiveExamPage: React.FC = () => {
           >
             <TextField
               multiline
-              variant="outlined"
+              variant="standard"
               rows={4}
               fullWidth
               value={textAreaAnswer}
@@ -249,6 +250,10 @@ const DescriptiveExamPage: React.FC = () => {
                 marginX: "40px",
                 border: "1px solid lightskyblue",
                 height: "120px",
+                "& .MuiInputBase-input": {
+                  paddingX: "10px",
+                  outline: "none",
+                },
               }}
             />
           </Grid>
