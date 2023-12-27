@@ -1376,7 +1376,7 @@ const Home: React.FC = () => {
                     fontWeight: "bold",
                     color: "#303169",
                   }}
-                  alignSelf={{ xs: "center", sm: "start", md: "start" }}
+                  alignSelf="start"
                 >
                   More
                 </Typography>
