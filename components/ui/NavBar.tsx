@@ -18,7 +18,6 @@ import { useRouter } from "next/navigation";
 import { navBarListData } from "../../constant/NavbarListData";
 
 const ResponsiveAppBar: React.FC = () => {
-  const [selectedButton, setSelectedButton] = useState<string>("Sign in");
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -30,8 +29,7 @@ const ResponsiveAppBar: React.FC = () => {
   const theme = useTheme();
 
   // function to handle login button and redirect to login page
-  const handleLoginButton = (buttonName: string) => {
-    setSelectedButton(buttonName);
+  const handleLoginButton = async () => {
     router.push(`/login`);
     return null;
   };
@@ -129,7 +127,7 @@ const ResponsiveAppBar: React.FC = () => {
                     backgroundColor: "#F6D2BB",
                   },
                 }}
-                onClick={() => handleLoginButton("Sign in")}
+                onClick={handleLoginButton}
               >
                 Sign up
               </MenuItem>
@@ -184,17 +182,21 @@ const ResponsiveAppBar: React.FC = () => {
               <Box sx={{ display: "flex", mr: { xs: 0, sm: 4 } }}>
                 <Button
                   sx={{
-                    backgroundColor: `${
-                      selectedButton === "Log in" ? "#303169" : "inherit"
-                    }`,
+                    backgroundColor: {
+                      xs: theme.palette.primary.main,
+                      sm: "inherit",
+                    },
                     borderRadius: "20px",
                     fontSize: "12px",
-                    color: "#303169",
+                    color: {
+                      xs: theme.palette.background.default,
+                      sm: theme.palette.primary.main,
+                    },
                     "&:hover": {
                       bgcolor: theme.palette.primary.light,
                     },
                   }}
-                  onClick={() => handleLoginButton("Log in")}
+                  onClick={() => handleLoginButton()}
                 >
                   Log in
                 </Button>
@@ -202,24 +204,15 @@ const ResponsiveAppBar: React.FC = () => {
                   sx={{
                     display: { xs: "none", md: "block" },
 
-                    backgroundColor: `${
-                      selectedButton === "Sign in"
-                        ? `${theme.palette.primary.main}`
-                        : "inherit"
-                    }`,
+                    backgroundColor: theme.palette.primary.main,
                     borderRadius: "20px",
                     fontSize: "12px",
-                    color: `
-                      ${
-                        selectedButton === "Sign in"
-                          ? `${theme.palette.background.default}`
-                          : "inherit"
-                      }`,
+                    color: theme.palette.background.default,
                     "&:hover": {
                       bgcolor: theme.palette.primary.light,
                     },
                   }}
-                  onClick={() => handleLoginButton("Sign in")}
+                  onClick={() => handleLoginButton()}
                 >
                   Sign Up
                 </Button>
