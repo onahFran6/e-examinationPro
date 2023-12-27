@@ -365,7 +365,7 @@ const Home: React.FC = () => {
                   </Grid>
                 </MiniCard>
                 <Image
-                  src="./assets/images/doctorLocation.jpeg"
+                  src="./assets/images/doctorLocation.png"
                   alt="doctor location"
                   sx={{
                     position: "absolute",
