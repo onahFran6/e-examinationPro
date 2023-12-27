@@ -993,7 +993,7 @@ const Home: React.FC = () => {
                   >
                     {" "}
                     <ImageForIcon
-                      src={"./assets/images/appleicon.png"}
+                      src={"./assets/images/appleIcon.png"}
                       alt="download on apple store"
                     />
                     <Box
