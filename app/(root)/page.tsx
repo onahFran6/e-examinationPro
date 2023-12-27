@@ -546,7 +546,7 @@ const Home: React.FC = () => {
               <Box
                 sx={{
                   borderRadius: "20px",
-                  backgroundColor: "#89FFFE",
+                  backgroundColor: "#89FFFE55",
                   height: { xs: "240px", sm: "300px" },
                   position: "relative",
                 }}
@@ -791,7 +791,15 @@ const Home: React.FC = () => {
                     src={"./assets/images/profile.jpg"}
                     alt="profile"
                   />
-                  <Box sx={{ textAlign: "left", pt: 1, marginLeft: "5px" }}>
+                  <Box
+                    sx={{
+                      textAlign: "left",
+                      paddingTop: "15px",
+                      marginLeft: "15px",
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                  >
                     <Typography
                       variant="h2"
                       sx={{
@@ -913,7 +921,10 @@ const Home: React.FC = () => {
                       }}
                     >
                       <ContactPhoneIcon
-                        sx={{ color: "#303169", padding: 0.2 }}
+                        sx={{
+                          color: "#303169",
+                          marginX: { xs: "1px", sm: "10px" },
+                        }}
                       />
                       <TextField
                         variant="standard"
