@@ -15,7 +15,7 @@ export const MainContainer = styled("div")(({ theme }) => ({
   paddingTop: theme.spacing(12),
   paddingBottom: theme.spacing(6),
   position: "relative",
-  background: "linear-gradient(45deg, #EADEFE 0%, #EADEFE 100%)",
+  // background: "linear-gradient(88deg, #C5F3FF 0%, #D6F7FF 100%)",
 }));
 
 export const ContentContainer = styled("div")(({ theme }) => ({
@@ -39,7 +39,7 @@ export const SpecializationCard = styled(Card)(({ theme }) => ({
   "&:hover": {
     backgroundColor: "white", // backgroundColor: "#F6D2BB",
     transform: "scale(1.05)",
-    boxShadow: "5px 15px 15px 10px rgba(0, 0, 0, 0.2)",
+    boxShadow: 3,
   },
 }));
 
@@ -49,7 +49,7 @@ export const LookingForCard = styled(Card)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   width: "100%",
-  height: "120px",
+  height: "80px",
   padding: theme.spacing(2),
   borderRadius: "4px",
   cursor: "pointer",

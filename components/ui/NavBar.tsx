@@ -49,7 +49,7 @@ const ResponsiveAppBar: React.FC = () => {
       sx={{
         position: "fixed",
         top: 0,
-        backgroundColor: "#EADEFE",
+        // backgroundColor: "linear-gradient(88deg, #C5F3FF 0%, #D6F7FF 100%)", // "#EADEFE",
         boxShadow: "none",
       }}
     >
@@ -120,6 +120,19 @@ const ResponsiveAppBar: React.FC = () => {
                   {page}
                 </MenuItem>
               ))}
+
+              <MenuItem
+                sx={{
+                  display: { xs: "block", md: "none" },
+                  backgroundColor: "#EADEFE",
+                  "&:hover": {
+                    backgroundColor: "#F6D2BB",
+                  },
+                }}
+                onClick={() => handleLoginButton("Sign in")}
+              >
+                Sign up
+              </MenuItem>
             </Menu>
           </Box>
 
@@ -168,7 +181,7 @@ const ResponsiveAppBar: React.FC = () => {
           {/* login sign in  */}
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="">
-              <Box sx={{ display: "flex", mr: 4 }}>
+              <Box sx={{ display: "flex", mr: { xs: 0, sm: 4 } }}>
                 <Button
                   sx={{
                     backgroundColor: `${
@@ -187,6 +200,8 @@ const ResponsiveAppBar: React.FC = () => {
                 </Button>
                 <Button
                   sx={{
+                    display: { xs: "none", md: "block" },
+
                     backgroundColor: `${
                       selectedButton === "Sign in"
                         ? `${theme.palette.primary.main}`
@@ -206,7 +221,7 @@ const ResponsiveAppBar: React.FC = () => {
                   }}
                   onClick={() => handleLoginButton("Sign in")}
                 >
-                  Sign in
+                  Sign Up
                 </Button>
               </Box>
             </Tooltip>

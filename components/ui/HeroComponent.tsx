@@ -122,10 +122,10 @@ const HeroComponent: React.FC = () => {
         <Box
           sx={{
             display: "flex",
-            width: { xs: "90%", sm: "648px" },
+            width: { xs: "90%", sm: "668px" },
             mt: 4,
             mx: "auto",
-            paddingX: { xs: "1px", sm: "20px" },
+            paddingX: { xs: "1px", sm: "0px" },
           }}
         >
           <Grid
@@ -136,11 +136,13 @@ const HeroComponent: React.FC = () => {
               borderRadius: "50px",
               position: "relative",
               height: { xs: "50px", sm: "60px" },
+              marginX: { xs: "40px", sm: "1px" },
+              marginBottom: { xs: "20px", sm: "0px" },
             }}
           >
             <Grid
               item
-              xs={4}
+              xs={5}
               sm={4}
               sx={{
                 display: "flex",
@@ -158,7 +160,7 @@ const HeroComponent: React.FC = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  fontSize: { xs: "8px", sm: "16px" },
+                  fontSize: { xs: "10px", sm: "16px" },
                   color: "#18181B",
                   width: "fit-content",
                   // wordWrap: "nowrap",
@@ -170,7 +172,7 @@ const HeroComponent: React.FC = () => {
             </Grid>
             <Grid
               item
-              xs={4}
+              xs={7}
               sm={4}
               sx={{
                 display: "flex",
@@ -188,6 +190,7 @@ const HeroComponent: React.FC = () => {
               <TextField
                 variant="standard"
                 placeholder="Search for doctors,"
+                autoFocus={true}
                 value={searchValue}
                 onChange={(e) => setSearchValue(e.target.value)}
                 sx={{
@@ -196,7 +199,7 @@ const HeroComponent: React.FC = () => {
                   color: "#18181B",
                   outline: "none",
                   border: 0,
-                  padding: 2,
+                  padding: { xs: 1, sm: 2 },
                   "& .MuiInputBase-input": {
                     padding: 0,
                   },
@@ -205,12 +208,12 @@ const HeroComponent: React.FC = () => {
             </Grid>
             <Grid
               item
-              xs={4}
+              xs={12}
               sm={4}
               sx={{
                 display: "flex",
                 position: "relative",
-                justifyContent: "end",
+                justifyContent: { xs: "center", sm: "flex-end" },
                 height: "inherit",
               }}
             >
@@ -218,7 +221,7 @@ const HeroComponent: React.FC = () => {
                 sx={{
                   bgcolor: theme.palette.primary.main,
                   borderRadius: "50px",
-                  color: "#ffffff",
+                  color: theme.palette.background.default,
                   px: 2,
                   py: 1,
                   my: 2,
@@ -263,10 +266,11 @@ const HeroComponent: React.FC = () => {
                         sx={{
                           fontSize: "16px",
                           width: "fit-content",
-                          whiteSpace: "nowrap",
-                          mx: "auto",
+                          whiteSpace: "wrap",
                           color: "#18181B",
                           fontWeight: 500,
+                          alignSelf: "start",
+                          marginLeft: "5px",
                         }}
                       >
                         {item.head}
@@ -276,10 +280,11 @@ const HeroComponent: React.FC = () => {
                         sx={{
                           fontSize: "12px",
                           width: "fit-content",
-                          whiteSpace: "nowrap",
-                          mx: "auto",
+                          whiteSpace: "wrap",
                           color: "#787887",
                           fontWeight: 400,
+                          alignSelf: "start",
+                          marginLeft: "5px",
                         }}
                       >
                         {item.body}
@@ -338,8 +343,7 @@ const HeroComponent: React.FC = () => {
                     sx={{
                       fontSize: "16px",
                       width: "fit-content",
-                      whiteSpace: "nowrap",
-                      mx: "auto",
+                      whiteSpace: "wrap",
                       color: theme.palette.primary.main,
                       fontWeight: 700,
                     }}
@@ -352,7 +356,6 @@ const HeroComponent: React.FC = () => {
                       fontSize: "12px",
                       width: "fit-content",
                       whiteSpace: "wrap",
-                      mx: "auto",
                       color: "#787887",
                       fontWeight: 400,
                     }}
@@ -392,8 +395,7 @@ const HeroComponent: React.FC = () => {
                     sx={{
                       fontSize: "16px",
                       width: "fit-content",
-                      whiteSpace: "nowrap",
-                      mx: "auto",
+                      whiteSpace: "wrap",
                       color: theme.palette.primary.main,
                       fontWeight: 700,
                     }}
@@ -429,15 +431,13 @@ const HeroComponent: React.FC = () => {
               sx={{
                 top: { xs: 20, sm: 30 },
                 left: { xs: 20, sm: 30 },
-                // height: { xs: "40px", sm: "80px" },
-                // width: { xs: "40px", sm: "80px" },
                 position: "absolute",
                 display: "flex",
                 alignItems: "center",
               }}
             >
               <ImageForCall
-                src={"./assets/images/francis.jpg"}
+                src={"./assets/images/onlinePicture.webp"}
                 alt=""
                 sx={{
                   height: { xs: "20px", sm: "40px" },
@@ -462,7 +462,7 @@ const HeroComponent: React.FC = () => {
             </Box>
 
             <ConsultationImage
-              src={"./assets/images/consultant.png"}
+              src={"./assets/images/consultant.jpeg"}
               alt=""
               sx={{
                 height: { xs: "250px", sm: "350px", md: "400px" },

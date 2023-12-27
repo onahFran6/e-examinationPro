@@ -31,11 +31,11 @@ yarn install
 
 ### `Environment variable`
 
-```
-
 create a .env file and add the below to it
 
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="entercloudinary_cloud_name"
+
+```
 
 ````
 

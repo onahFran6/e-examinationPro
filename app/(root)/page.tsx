@@ -41,6 +41,7 @@ import {
 import HeroComponent from "@/components/ui/HeroComponent";
 import { AlertColor } from "@mui/material/Alert";
 import CustomizedSnackbar from "@/components/ui/CustomSnackbar";
+import Header from "@/components/shared/Header";
 
 const Home: React.FC = () => {
   const [isHovered, setHovered] = useState(false);
@@ -98,8 +99,53 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <HeroComponent />
-
+      <Box
+        sx={{
+          background: "linear-gradient(88deg, #C5F3FF 0%, #D6F7FF 100%)",
+          position: "relative",
+        }}
+      >
+        {" "}
+        <Box
+          sx={{
+            width: { xs: "100px", sm: "1500px", md: "200px" },
+            height: { xs: "100px", sm: "200px", md: "300px" },
+            left: "20px",
+            top: "20px",
+            position: "absolute",
+            background: "#EADEFE",
+            boxShadow: "450px 450px 450px ",
+            borderRadius: "80%",
+            filter: "blur(450px)",
+          }}
+        />
+        <Box
+          sx={{
+            width: { xs: "100px", sm: "1500px", md: "200px" },
+            height: { xs: "100px", sm: "200px", md: "300px" },
+            right: "10px",
+            bottom: "10px",
+            position: "absolute",
+            background: "#EADEFE",
+            boxShadow: "450px 450px 450px ",
+            borderRadius: "90%",
+            filter: "blur(450px)",
+          }}
+        />
+        <Box
+          sx={{
+            width: "100px",
+            height: "100px",
+            background: "linear-gradient(128deg, #DEF9FE 0%, #CAF3FF 100%)",
+            borderRadius: "100%",
+            position: "absolute",
+            left: { xs: "50px", sm: "80px", md: "160px" },
+            bottom: { xs: "50px", sm: "100px", md: "150px" },
+          }}
+        />
+        <Header />
+        <HeroComponent />
+      </Box>
       {/* use for rendering alert to the user */}
       <CustomizedSnackbar
         open={snackbarOpen}
@@ -572,7 +618,7 @@ const Home: React.FC = () => {
           </Grid>
         </Box>
 
-        {/*get membership  */}
+        {/*get membership   */}
         <Box
           p={{ xs: 1, sm: 4 }}
           my={{ xs: 2, sm: 4 }}
@@ -830,8 +876,8 @@ const Home: React.FC = () => {
 
                 <Box
                   sx={{
-                    border: "1px solid #D1D5DB",
-                    bgcolor: "#ffffff",
+                    // border: "1px solid #D1D5DB",
+                    // bgcolor: "#ffffff",
                     borderRadius: "50px",
                     display: "flex",
                     py: "1px",
@@ -844,40 +890,79 @@ const Home: React.FC = () => {
                     alignItems: "center",
                   }}
                 >
-                  <ContactPhoneIcon sx={{ color: "#303169", padding: 0.2 }} />
-                  <TextField
-                    variant="standard"
-                    value={phoneNumber}
-                    type="number"
-                    onChange={(e) => setPhoneNumber(e.target.value)}
-                    placeholder="Enter phone number"
+                  <Grid
+                    container
                     sx={{
+                      border: "1px solid #D1D5DB",
                       borderRadius: "50px",
-                      outline: "none",
-                      border: 0,
-                      paddingX: 1,
+                      position: "relative",
+                      height: { xs: "50px", sm: "60px" },
+                      marginBottom: { xs: "20px", sm: "0px" },
                     }}
-                  />
-
-                  <Button
-                    sx={{
-                      fontSize: "12px",
-                      width: "fit-content",
-                      bgcolor: "#303169",
-                      borderRadius: "50px",
-                      color: theme.palette.background.default,
-                      px: { xs: 1, sm: 2 },
-                      m: 1,
-                      "&:hover": {
-                        bgcolor: theme.palette.primary.light,
-
-                        color: "#18181B",
-                      },
-                    }}
-                    onClick={sendDownloadLink}
                   >
-                    Send SMS
-                  </Button>
+                    <Grid
+                      item
+                      xs={12}
+                      sm={8}
+                      sx={{
+                        display: "flex",
+                        position: "relative",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        height: "inherit",
+                      }}
+                    >
+                      <ContactPhoneIcon
+                        sx={{ color: "#303169", padding: 0.2 }}
+                      />
+                      <TextField
+                        variant="standard"
+                        value={phoneNumber}
+                        type="number"
+                        onChange={(e) => setPhoneNumber(e.target.value)}
+                        placeholder="Enter phone number"
+                        sx={{
+                          borderRadius: "50px",
+                          outline: "none",
+                          border: 0,
+                          paddingX: 1,
+                        }}
+                      />
+                    </Grid>
+                    <Grid
+                      item
+                      xs={12}
+                      sm={4}
+                      sx={{
+                        display: "flex",
+                        position: "relative",
+                        alignItems: "center",
+                        justifyContent: { xs: "center", sm: "flex-end" },
+                        height: "inherit",
+                        // border: "1px solid #D1D5DB",
+                      }}
+                    >
+                      <Button
+                        sx={{
+                          fontSize: "12px",
+                          width: "fit-content",
+                          bgcolor: "#303169",
+                          borderRadius: "50px",
+                          color: theme.palette.background.default,
+                          px: { xs: 1, sm: 2 },
+                          m: 1,
+                          "&:hover": {
+                            bgcolor: theme.palette.primary.light,
+
+                            color: "#18181B",
+                          },
+                        }}
+                        onClick={sendDownloadLink}
+                      >
+                        Send SMS
+                      </Button>
+                    </Grid>
+                  </Grid>
                 </Box>
 
                 {/* DOWNLOAD BUTTON */}
@@ -1003,7 +1088,7 @@ const Home: React.FC = () => {
             >
               <Box
                 sx={{
-                  borderRadius: "100%",
+                  borderRadius: "120%",
                   backgroundColor: "#F6D2BB99",
                   height: { xs: "200px", sm: "300px" },
                   display: "flex",
@@ -1022,7 +1107,7 @@ const Home: React.FC = () => {
                   {" "}
                   <DownloadAppImage
                     src="./assets/images/downloadApp.jpeg"
-                    alt=""
+                    alt=" download app"
                   />
                 </Box>
               </Box>
