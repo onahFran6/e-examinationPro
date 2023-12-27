@@ -38,7 +38,7 @@ const CustomizedSnackbar: React.FC<CustomizedSnackbarProps> = ({
   return (
     <Snackbar
       open={open}
-      autoHideDuration={4000}
+      autoHideDuration={8000}
       onClose={handleClose}
       anchorOrigin={{ vertical: "top", horizontal: "right" }}
     >

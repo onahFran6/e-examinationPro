@@ -5,10 +5,10 @@ import ThankYou from "@/components/ui/ThankYou";
 import { RootState } from "@/store/store";
 import { Box, Grid } from "@mui/material";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 
-const pages = () => {
+const Thank = () => {
   const user = useSelector((state: RootState) => state.user);
   const { isAuthenticated, error } = useSelector(
     (state: RootState) => state.user
@@ -16,8 +16,13 @@ const pages = () => {
   const { isFinishExam } = useSelector((state: RootState) => state.exams);
   const router = useRouter();
 
+  useEffect(() => {
+    if (!isAuthenticated && !isFinishExam) {
+      router.push("/login");
+    }
+  }, [isAuthenticated, isFinishExam, router]);
+
   if (!isAuthenticated && !isFinishExam) {
-    router.push("/login");
     return null;
   }
 
@@ -48,4 +53,4 @@ const pages = () => {
   );
 };
 
-export default pages;
+export default Thank;

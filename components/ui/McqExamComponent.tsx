@@ -69,15 +69,9 @@ const MCQExamPage: React.FC = () => {
   ) => {
     // console.log("===>>>>", { answer: event.target.value });
     setCurrentAnswer(event.target.value);
-    // dispatch(
-    //   submitAnswer({
-    //     questionId: currentQuestionIndex,
-    //     answer: event.target.value,
-    //   })
-    // );
   };
 
-  const handleFinishExam = async () => {
+  const handleFinishExam = () => {
     if (currentAnswer) {
       dispatch(finishExam());
       router.push("/thank");

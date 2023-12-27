@@ -250,7 +250,6 @@ const Home: React.FC = () => {
           <Grid container>
             <Grid
               item
-              spacing={2}
               xs={12}
               sm={6}
               sx={{
@@ -332,7 +331,6 @@ const Home: React.FC = () => {
             </Grid>
             <Grid
               item
-              spacing={2}
               xs={12}
               sm={6}
               sx={{
@@ -420,7 +418,6 @@ const Home: React.FC = () => {
           <Grid container>
             <Grid
               item
-              spacing={2}
               xs={12}
               sm={6}
               sx={{
@@ -489,7 +486,6 @@ const Home: React.FC = () => {
 
             <Grid
               item
-              spacing={2}
               xs={12}
               sm={6}
               sx={{
@@ -585,7 +581,6 @@ const Home: React.FC = () => {
           <Grid container>
             <Grid
               item
-              spacing={2}
               xs={6}
               sm={6}
               sx={{
@@ -681,7 +676,7 @@ const Home: React.FC = () => {
         {/* patient */}
         <Box p={{ xs: 2, sm: 4 }}>
           <Grid container>
-            <Grid item spacing={2} xs={12} sm={6} sx={{ paddingRight: "20px" }}>
+            <Grid item xs={12} sm={6} sx={{ paddingRight: "20px" }}>
               <Box
                 sx={{
                   borderRadius: "20px",
@@ -705,7 +700,6 @@ const Home: React.FC = () => {
 
             <Grid
               item
-              spacing={2}
               xs={12}
               sm={6}
               sx={{ display: { sm: "flex" }, alignItems: "center" }}
@@ -783,7 +777,6 @@ const Home: React.FC = () => {
           <Grid container>
             <Grid
               item
-              spacing={2}
               xs={12}
               sm={12}
               md={6}
@@ -1001,7 +994,6 @@ const Home: React.FC = () => {
 
             <Grid
               item
-              spacing={2}
               xs={12}
               sm={12}
               md={6}
@@ -1117,7 +1109,7 @@ const Home: React.FC = () => {
               </Typography>
               {PatientLinkData.map((data, index) => {
                 return (
-                  <Link href={`/`} key={`Consulto${index}`}>
+                  <Link href={`/`} key={`Patient${index}`}>
                     <Typography
                       variant="h2"
                       sx={{
@@ -1162,7 +1154,7 @@ const Home: React.FC = () => {
               </Typography>
               {DoctorsLinkData.map((data, index) => {
                 return (
-                  <Link href={`/`} key={`Consulto${index}`}>
+                  <Link href={`/`} key={`doctorLink${index}`}>
                     <Typography
                       variant="h2"
                       sx={{
@@ -1191,7 +1183,7 @@ const Home: React.FC = () => {
               </Typography>
               {ClinicsLinkData.map((data, index) => {
                 return (
-                  <Link href={`/`} key={`Consulto${index}`}>
+                  <Link href={`/`} key={`Clinics${index}`}>
                     <Typography
                       variant="h2"
                       sx={{
@@ -1235,7 +1227,7 @@ const Home: React.FC = () => {
               </Typography>
               {HospitalsLinkData.map((data, index) => {
                 return (
-                  <Link href={`/`} key={`Consulto${index}`}>
+                  <Link href={`/`} key={`Hospitals${index}`}>
                     <Typography
                       variant="h2"
                       sx={{
@@ -1290,8 +1282,9 @@ const Home: React.FC = () => {
                         bgcolor: theme.palette.primary.light,
                       },
                     }}
+                    key={`More${index}`}
                   >
-                    <Link href={`/`} key={`Consulto${index}`}>
+                    <Link href={`/`}>
                       <Typography
                         variant="h2"
                         sx={{

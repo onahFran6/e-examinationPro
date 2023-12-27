@@ -33,6 +33,7 @@ const ResponsiveAppBar: React.FC = () => {
   const handleLoginButton = (buttonName: string) => {
     setSelectedButton(buttonName);
     router.push(`/login`);
+    return null;
   };
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {

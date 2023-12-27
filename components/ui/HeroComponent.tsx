@@ -256,8 +256,8 @@ const HeroComponent: React.FC = () => {
             <Grid container spacing={2}>
               {LookingForData.map((item, index) => {
                 return (
-                  <Grid item xs={6} sm={3}>
-                    <LookingForCard key={`looking-for-${index}`}>
+                  <Grid item xs={6} sm={3} key={`looking-for-${index}`}>
+                    <LookingForCard>
                       <Typography
                         variant="body1"
                         sx={{

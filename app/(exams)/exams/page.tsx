@@ -2,7 +2,7 @@
 
 import { Box, Grid } from "@mui/material";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useTheme } from "@mui/material/styles";
 
@@ -24,8 +24,13 @@ const pages = () => {
   // console.log("=====>>>>  auth", { user });
 
   // Redirect to the login page if not authenticated
+  useEffect(() => {
+    if (!isAuthenticated) {
+      router.push("/login");
+    }
+  }, [isAuthenticated, router]);
+
   if (!isAuthenticated) {
-    router.push("/login");
     return null;
   }
 

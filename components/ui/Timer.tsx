@@ -30,6 +30,10 @@ const Timer: React.FC<TimerProps> = ({ timeRemaining, isAuthenticated }) => {
     return () => clearInterval(intervalId);
   }, []);
 
+  if (isAuthenticated && timerRef.current <= 0) {
+    return null;
+  }
+
   const minutes = Math.floor(timerRef.current / 60);
   const seconds = timerRef.current % 60;
 

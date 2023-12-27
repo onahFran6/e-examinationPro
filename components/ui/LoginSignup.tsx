@@ -60,12 +60,12 @@ const LoginSignupPage: React.FC = () => {
     }
 
     try {
+      const message = `Welcome, ${email}! You are logged in.`;
+      handleClick({ message, severity: "success" });
       // Dispatch login action with email and update the authentication state
       dispatch(loginSuccess(email));
       dispatch(startExam());
       router.push("/exams");
-      const message = `Welcome, ${email}! You are logged in.`;
-      handleClick({ message, severity: "success" });
     } catch (error) {
       const message = "Authentication failed. Please check your ";
       handleClick({ message, severity: "success" });
